@@ -3,15 +3,19 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 
+    public float movmentSpeed;
+    private float enemyX = 1;
+    //private float enemyY;
 
-	// Use this for initialization
-	void Start () 
+    void Start()
     {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () 
+
+    }
+
+    void Update()
     {
-	}
+
+        transform.Translate(new Vector2(enemyX * movmentSpeed, 0f), Space.World);
+
+    }
 }
