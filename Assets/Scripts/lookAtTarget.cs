@@ -17,7 +17,7 @@ public class lookAtTarget : MonoBehaviour {
 
         if (target != null)
         {
-            transform.
+
         }
 
 	}
