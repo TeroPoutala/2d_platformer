@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour {
     {
 
         transform.Translate(new Vector2(enemyX * movmentSpeed, 0f), Space.World);
-
+        
+        
     }
 }
