@@ -5,31 +5,58 @@ public class Angel : MonoBehaviour {
 
     public Transform target;
 
-    private int angelX;
-    private int targetX = 0;
+    private float angelX;
+    private float targetX;
+    private float positionX;
 
-    bool angleFacingRight = false;
+    bool angelFacingRight = false;
 
     // Use this for initialization
 
-    void Start ()
+    void Start()
     {
-	
-	}
+        positionX = 0;
+    }
 
     // Update is called once per frame
 
     void Update ()
     {
-	    
-        if (targetX < angelX)
+
+        targetX = target.transform.position.x;
+        angelX = transform.position.x;
+
+        if (angelX > targetX)
         {
-            angleFacingRight = false;
+            angelFacingRight = false;
+            //transform.Rotate(0,-180, 0);
+        }
+        else if (angelX <= targetX)
+        {
+            angelFacingRight = true;
+            //transform.Rotate(0, 0, 0);
+        }
+
+        if (angelFacingRight == true)
+        {
+            Vector3 scale = transform.localScale;
+            scale.x = -Mathf.Abs(scale.x);
+            transform.localScale = scale;
         }
         else
         {
-            angleFacingRight = true;
+            Vector3 scale = transform.localScale;
+            scale.x = Mathf.Abs(scale.x);
+            transform.localScale = scale;
         }
 
-	}
+        Vector3 directionToPlayer = target.transform.position - transform.position;
+        //directionToPlayer.Normalize();
+
+        Quaternion rotation = Quaternion.LookRotation(directionToPlayer);
+        rotation.y = 0;
+        rotation.x = 0;
+        transform.rotation = rotation;
+
+    }
 }
