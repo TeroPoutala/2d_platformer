@@ -586,6 +586,10 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011466226862, guid: ce9ad0885ca486b4b8704e1197c3ada9, type: 2}
+      propertyPath: m_Name
+      value: WeaponHitbox
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce9ad0885ca486b4b8704e1197c3ada9, type: 2}
   m_IsPrefabParent: 0
