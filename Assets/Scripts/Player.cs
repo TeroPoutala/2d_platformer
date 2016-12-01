@@ -87,7 +87,9 @@ public class Player : MonoBehaviour
         }
         if (col.gameObject.tag == "Enemy" && invTime == hitTimer)
         {
+            Debug.Log("got hit");
             rb.AddForce(transform.right * -knockBack);
+            rb.AddForce(transform.up * knockBack);
             hit = true;
 
         }
