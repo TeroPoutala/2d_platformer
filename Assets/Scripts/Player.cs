@@ -81,13 +81,15 @@ public class Player : MonoBehaviour
     }
     void OnCollisionEnter2D (Collision2D col)
     {
-        if(col.gameObject.tag == "Ground")
+        if(col.gameObject.tag == "Ground" || col.gameObject.tag == "ShooterEnemy")
         {
             grounded = true;
         }
         if (col.gameObject.tag == "Enemy" && invTime == hitTimer)
         {
+            Debug.Log("got hit");
             rb.AddForce(transform.right * -knockBack);
+            rb.AddForce(transform.up * knockBack);
             hit = true;
 
         }
