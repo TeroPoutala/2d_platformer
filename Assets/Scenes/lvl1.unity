@@ -1409,7 +1409,7 @@ Transform:
   m_Children:
   - {fileID: 1912816798}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!61 &465047902
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4094,7 +4094,7 @@ Transform:
   m_Children:
   - {fileID: 1291037014}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!1 &1344956515
 GameObject:
   m_ObjectHideFlags: 0
@@ -6156,6 +6156,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xSpeed: 0.3
   ySpeed: 1500
+  knockBack: 0
+  invTime: 0
 --- !u!61 &2118904949
 BoxCollider2D:
   m_ObjectHideFlags: 0
