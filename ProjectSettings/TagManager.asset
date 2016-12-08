@@ -9,6 +9,7 @@ TagManager:
   - enemyTrigger
   - ShooterEnemy
   - Arrow
+  - SwingHitBox
   layers:
   - Default
   - TransparentFX
