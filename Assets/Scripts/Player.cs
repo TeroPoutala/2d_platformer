@@ -10,13 +10,13 @@ public class Player : MonoBehaviour
     public float knockBack = 0f;
     public float invTime = 0f;
     public static float score;
+    public static int lives;
     public Text ScoreText;
     public Text GameOverText;
     public Image life1;
     public Image life2;
     public Image life3;
 
-    private int lives;
     private float playerX = 0f;
     private float playerY = 0f;
     private float hitTimer = 0f;

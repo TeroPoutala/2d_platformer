@@ -21,6 +21,9 @@ GameObject:
   - 4: {fileID: 4000011060903712}
   - 212: {fileID: 212000012313771776}
   - 95: {fileID: 95000010446265236}
+  - 114: {fileID: 114000010912361536}
+  - 50: {fileID: 50000012529464912}
+  - 61: {fileID: 61000010893674854}
   m_Layer: 0
   m_Name: Muffin
   m_TagString: Enemy
@@ -41,6 +44,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &50000012529464912
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010155901132}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &61000010893674854
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010155901132}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 7.8599997, y: 8.509999}
 --- !u!95 &95000010446265236
 Animator:
   serializedVersion: 3
@@ -58,6 +92,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000010912361536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010155901132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd374c3fd387778459e4c65b01e8396c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invTime: 0
+  left: {fileID: 0}
+  right: {fileID: 0}
+  movmentSpeed: 0
 --- !u!212 &212000012313771776
 SpriteRenderer:
   m_ObjectHideFlags: 1

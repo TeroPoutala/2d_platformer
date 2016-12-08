@@ -36,10 +36,10 @@ GameObject:
   - 4: {fileID: 4000013364273076}
   - 212: {fileID: 212000013601874026}
   - 114: {fileID: 114000012412634244}
-  - 58: {fileID: 58000014060570018}
+  - 61: {fileID: 61000013419991236}
   m_Layer: 0
   m_Name: TurretEnemy
-  m_TagString: Untagged
+  m_TagString: ShooterEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012910694480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.83, y: 2.03, z: 0}
+  m_LocalPosition: {x: -1.72, y: -0.15, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -71,8 +71,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000013364273076}
   m_RootOrder: 0
---- !u!58 &58000014060570018
-CircleCollider2D:
+--- !u!61 &61000013419991236
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -82,9 +82,9 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.46, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3.5
+  m_Size: {x: 8.029999, y: 7}
 --- !u!114 &114000012412634244
 MonoBehaviour:
   m_ObjectHideFlags: 1

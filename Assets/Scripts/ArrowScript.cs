@@ -15,6 +15,10 @@ public class ArrowScript : MonoBehaviour {
 	}
     void OnTriggerEnter2D(Collider2D col)
     {
+        if (col.gameObject.tag == "Player")
+        {
+            Player.lives--;
+        }
         if (col.gameObject.tag != "ShooterEnemy")
         {
             Destroy(gameObject);

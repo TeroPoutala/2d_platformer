@@ -8,13 +8,12 @@ public class TurretEnemyScript : MonoBehaviour {
     public float shootTimer = 2.0f;
 
     private float currentTime;
-	// Use this for initialization
 	void Start () 
     {
         currentTime = shootTimer;
+
 	}
 	
-	// Update is called once per frame
 	void Update () 
     {
         currentTime -= Time.deltaTime;
@@ -31,6 +30,8 @@ public class TurretEnemyScript : MonoBehaviour {
             arrowPrefab,
             arrowSpawn.position,
             arrowSpawn.rotation);
+
+
 
         // Add velocity to the bullet
         arrow.GetComponent<Rigidbody2D>().velocity = -arrow.transform.right * 6;
