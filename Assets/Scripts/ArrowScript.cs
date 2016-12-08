@@ -13,8 +13,11 @@ public class ArrowScript : MonoBehaviour {
     {
 	
 	}
-    void OnTriggerEnter2D()
+    void OnTriggerEnter2D(Collider2D col)
     {
-        Destroy(gameObject);
+        if (col.gameObject.tag != "ShooterEnemy")
+        {
+            Destroy(gameObject);
+        }
     }
 }

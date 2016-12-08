@@ -15,7 +15,6 @@ public class SwingHitbox : MonoBehaviour {
     {
         enemyCheck = false;
         hit = false;
-
 	}
 	
 
