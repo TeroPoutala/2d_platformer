@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - enemyTrigger
   - ShooterEnemy
+  - Arrow
   layers:
   - Default
   - TransparentFX
