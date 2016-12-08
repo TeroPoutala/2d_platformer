@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public float ySpeed = 0f;
     public float knockBack = 0f;
     public float invTime = 0f;
-    public static int score;
+    public static float score;
     public Text ScoreText;
     public Text GameOverText;
     public Image life1;
@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
         hitTimer = invTime;
 
         lives = 3;
-        score = 0;
+        score = 500;
         SetScoreText();
         SetLivesUI();
 
@@ -43,7 +43,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score++;
+        score -= Time.deltaTime;
+
         SetScoreText();
         
         if (lives <= 0)
