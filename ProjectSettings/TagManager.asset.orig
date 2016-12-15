@@ -10,7 +10,11 @@ TagManager:
   - ShooterEnemy
   - Arrow
   - SwingHitBox
+<<<<<<< HEAD
+  - Wall
+=======
   - Collectable
+>>>>>>> 311b8f69a6f9b0354cbbcc6bfc8ee36b623514ef
   layers:
   - Default
   - TransparentFX

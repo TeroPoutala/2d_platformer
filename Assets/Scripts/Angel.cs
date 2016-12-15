@@ -41,12 +41,10 @@ public class Angel : MonoBehaviour {
         if (angelX > targetX)
         {
             angelFacingRight = false;
-            //transform.Rotate(0,-180, 0);
         }
         else if (angelX <= targetX)
         {
             angelFacingRight = true;
-            //transform.Rotate(0, 0, 0);
         }
 
         if (angelFacingRight == true)
