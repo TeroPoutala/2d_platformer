@@ -96,11 +96,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010110921272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f89f6a5e7876494dbb4835ce6a7315f, type: 3}
+  m_Script: {fileID: 11500000, guid: 29609ce096d9b274aabfd9eb449cad7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  arrowPrefab: {fileID: 1000011105271202, guid: d9c6f21010c39ac41849d39f0608144e,
+  target: {fileID: 4000010592250538, guid: 15b30212b64953f4d9b390b04eac939f, type: 2}
+  arrowPrefab: {fileID: 1000011105271202, guid: fda20ce0763f2164b9c11fe29262b418,
     type: 2}
   arrowSpawn: {fileID: 4000012611792920}
   shootTimer: 2
