@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     private float hitTimer = 0f;
     private bool facingRight = true;
     private bool hit = false;
-    private bool grounded = false;
+    private bool grounded;
     private bool canMove;
 
     private Rigidbody2D rb;
@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
         hitTimer = invTime;
         invincibility = 1.5f;
 
+        grounded = false;
         canMove = true;
         lives = 3;
         score = 0;
@@ -51,6 +52,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(grounded);
 
         SetScoreText();
         
@@ -137,7 +139,7 @@ public class Player : MonoBehaviour
         {
             animator.SetBool("playerJump 0", true);
         }
-        else if (grounded == true)
+        else
         {
             animator.SetBool("playerJump 0", false);
         }
@@ -150,7 +152,7 @@ public class Player : MonoBehaviour
     }
     void OnCollisionStay2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Ground" || col.gameObject.tag == "ShooterEnemy")
+        if (col.gameObject.tag == "Ground" || col.gameObject.tag == "ShooterEnemy" || col.gameObject.tag == "Spikes")
         {
             grounded = true;
         }
