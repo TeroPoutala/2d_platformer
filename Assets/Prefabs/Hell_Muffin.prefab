@@ -21,6 +21,9 @@ GameObject:
   - 4: {fileID: 4000013854013108}
   - 212: {fileID: 212000010674552848}
   - 95: {fileID: 95000013252729614}
+  - 114: {fileID: 114000012727953156}
+  - 50: {fileID: 50000011391290018}
+  - 61: {fileID: 61000013188685584}
   m_Layer: 0
   m_Name: Hell_Muffin
   m_TagString: Enemy
@@ -36,11 +39,42 @@ Transform:
   m_GameObject: {fileID: 1000012869273400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &50000011391290018
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012869273400}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 2
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &61000013188685584
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012869273400}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 7.8599997, y: 8.509999}
 --- !u!95 &95000013252729614
 Animator:
   serializedVersion: 3
@@ -58,6 +92,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000012727953156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012869273400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd374c3fd387778459e4c65b01e8396c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invTime: 0
+  left: {fileID: 0}
+  right: {fileID: 0}
+  movementSpeed: 0.05
+  jumpSpeed: 300
 --- !u!212 &212000010674552848
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -87,7 +137,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: db42ee72767f854459732e8e6f9b56e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
