@@ -7,6 +7,7 @@ public class SwingHitbox : MonoBehaviour {
 
     private bool enemyCheck;
     private Enemy[] enemys;
+    private CarScript[] carEnemys;
     private int targetEnemyID;
     private int targetHitID;
     private GameObject target;
@@ -18,6 +19,7 @@ public class SwingHitbox : MonoBehaviour {
         enemyCheck = false;
 
         enemys = FindObjectsOfType<Enemy>();
+        carEnemys = FindObjectsOfType<CarScript>();
 	}
 	
 
@@ -42,6 +44,21 @@ public class SwingHitbox : MonoBehaviour {
                     {
                         enemy.hit = true;
                         enemy.lives--;
+                        Debug.Log("hit enemy" + targetHitID);
+                    }
+                }
+            }
+            foreach (CarScript carEnemy in carEnemys)
+            {
+                if (carEnemy != null)
+                {
+                    targetEnemyID = carEnemy.personalID;
+                    Debug.Log("enemy" + targetEnemyID);
+
+                    if (targetEnemyID == targetHitID)
+                    {
+                        carEnemy.hit = true;
+                        carEnemy.lives--;
                         Debug.Log("hit enemy" + targetHitID);
                     }
                 }

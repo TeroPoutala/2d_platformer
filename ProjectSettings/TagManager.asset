@@ -11,6 +11,8 @@ TagManager:
   - Arrow
   - SwingHitBox
   - Collectable
+  - Wall
+  - Spikes
   layers:
   - Default
   - TransparentFX

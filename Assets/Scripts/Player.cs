@@ -17,12 +17,14 @@ public class Player : MonoBehaviour
     public Image life2;
     public Image life3;
 
+    private float invincibility;
     private float playerX = 0f;
     private float playerY = 0f;
     private float hitTimer = 0f;
     private bool facingRight = true;
     private bool hit = false;
     private bool grounded = false;
+    private bool canMove;
 
     private Rigidbody2D rb;
 
@@ -33,9 +35,11 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         hitTimer = invTime;
+        invincibility = 1.5f;
 
+        canMove = true;
         lives = 3;
-        score = 500;
+        score = 0;
         SetScoreText();
         SetLivesUI();
 
@@ -47,7 +51,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score -= Time.deltaTime;
 
         SetScoreText();
         
@@ -60,16 +63,17 @@ public class Player : MonoBehaviour
         if (hit == true)
         {
             hitTimer -= Time.deltaTime;
-            this.GetComponent<BoxCollider2D>().enabled = false;
+            invincibility -= Time.deltaTime;
 
-            if (hitTimer <= invTime/2)
-            {
-                this.GetComponent<BoxCollider2D>().enabled = true;
-            }
             if (hitTimer <= 0f)
             {
-                hit = false;
+                canMove = true;
                 hitTimer = invTime;
+            }
+            if (invincibility <= 0)
+            {
+                invincibility = 1.5f;
+                hit = false;
             }
         }
         if (lives <= 0)
@@ -92,14 +96,14 @@ public class Player : MonoBehaviour
 
         }
 
-        if (Input.GetKey(KeyCode.A) && hit == false)
+        if (Input.GetKey(KeyCode.A) && canMove == true)
         {
             playerX = -1;
             facingRight = false;
             animator.SetTrigger("playerRun");
             
         }
-        else if (Input.GetKey(KeyCode.D) && hit == false)
+        else if (Input.GetKey(KeyCode.D) && canMove == true)
         {
             playerX = 1;
             facingRight = true;
@@ -111,7 +115,7 @@ public class Player : MonoBehaviour
             //animator.SetTrigger("playerIdle");
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && grounded == true && hit == false)
+        if (Input.GetKeyDown(KeyCode.Space) && grounded == true && canMove == true)
         {
             grounded = false;
             rb.AddForce(transform.up * ySpeed);
@@ -127,17 +131,18 @@ public class Player : MonoBehaviour
 
         SetLivesUI();
     }
-    void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionStay2D(Collision2D col)
     {
         if (col.gameObject.tag == "Ground" || col.gameObject.tag == "ShooterEnemy")
         {
             grounded = true;
         }
-        if (col.gameObject.tag == "Enemy" && invTime == hitTimer)
+        if (col.gameObject.tag == "Enemy" && invincibility == 1.5f || col.gameObject.tag == "Spikes" && invincibility == 1.5f)
         {
             rb.AddForce(transform.right * -knockBack);
             rb.AddForce(transform.up * knockBack);
             hit = true;
+            canMove = false;
             lives--;
         }
 
