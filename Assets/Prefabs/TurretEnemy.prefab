@@ -93,11 +93,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000012910694480}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fde46bdad61752a47a6f1bf72894625c, type: 3}
+  m_Script: {fileID: 11500000, guid: 04ab2912399e7424fa0de41345629281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowPrefab: {fileID: 1000011105271202, guid: d9c6f21010c39ac41849d39f0608144e,
-    type: 2}
+  arrowPrefab: {fileID: 0}
   arrowSpawn: {fileID: 4000013926213262}
   shootTimer: 2
 --- !u!212 &212000013601874026
@@ -129,7 +128,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f74616c1e78c2ec408e7cf2d45b9a25d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc26f746f9313f548a3c8bfa0a1eb553, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

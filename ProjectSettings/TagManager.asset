@@ -10,6 +10,7 @@ TagManager:
   - ShooterEnemy
   - Arrow
   - SwingHitBox
+  - Wall
   layers:
   - Default
   - TransparentFX

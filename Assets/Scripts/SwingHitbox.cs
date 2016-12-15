@@ -4,17 +4,20 @@ using System.Collections;
 public class SwingHitbox : MonoBehaviour {
 
     public float power = 0;
-    public static bool hit;
 
     private bool enemyCheck;
+    private Enemy[] enemys;
+    private int targetEnemyID;
+    private int targetHitID;
+    private GameObject target;
 
-    GameObject target;
     public Enemy targetEnemy;
 
 	void Start ()
     {
         enemyCheck = false;
-        hit = false;
+
+        enemys = FindObjectsOfType<Enemy>();
 	}
 	
 
@@ -23,12 +26,31 @@ public class SwingHitbox : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && enemyCheck == true)
         {
-            hit = true;
-
-            Debug.Log("hit enemy");
 
             target.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.up * power);
             target.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.right * power);
+
+            
+            foreach (Enemy enemy in enemys)
+            {
+                if (enemy != null)
+                {
+                    targetEnemyID = enemy.personalID;
+                    Debug.Log("enemy" + targetEnemyID);
+
+                    if (targetEnemyID == targetHitID)
+                    {
+                        enemy.hit = true;
+                        enemy.lives--;
+                        Debug.Log("hit enemy" + targetHitID);
+                    }
+                }
+            }
+            //GameObject obj = GameObject.Find("Player");
+            //Player Pscript = obj.GetComponent<Player>();
+
+            
+            //enemyScript.hit = true;
         }
 	}
     void OnTriggerEnter2D(Collider2D other)
@@ -37,7 +59,8 @@ public class SwingHitbox : MonoBehaviour {
         {
             enemyCheck = true;
             target = other.gameObject;
-            Debug.Log("check enemy");
+            targetHitID = other.gameObject.GetInstanceID();
+            Debug.Log("check enemy" + targetHitID);
 
         }
     }

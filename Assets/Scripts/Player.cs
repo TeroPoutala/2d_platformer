@@ -56,6 +56,12 @@ public class Player : MonoBehaviour
         if (hit == true)
         {
             hitTimer -= Time.deltaTime;
+            this.GetComponent<BoxCollider2D>().enabled = false;
+
+            if (hitTimer <= invTime/2)
+            {
+                this.GetComponent<BoxCollider2D>().enabled = true;
+            }
             if (hitTimer <= 0f)
             {
                 hit = false;
@@ -106,7 +112,7 @@ public class Player : MonoBehaviour
 
         transform.Translate(new Vector2(playerX * xSpeed, playerY * ySpeed), Space.World);
 
-
+        SetLivesUI();
     }
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -120,7 +126,6 @@ public class Player : MonoBehaviour
             rb.AddForce(transform.up * knockBack);
             hit = true;
             lives--;
-            SetLivesUI();
         }
 
     }
