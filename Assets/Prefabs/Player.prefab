@@ -149,15 +149,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45a23bc1f237744fb99d927f4543e8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xSpeed: 0.1
-  ySpeed: 400
+  xSpeed: 0.18
+  ySpeed: 650
   knockBack: 200
   invTime: 0.5
-  ScoreText: {fileID: 0}
-  GameOverText: {fileID: 0}
-  life1: {fileID: 0}
-  life2: {fileID: 0}
-  life3: {fileID: 0}
+  ScoreText: {fileID: 114000010464018138, guid: e49dd86f8d99260419a474ebb7be61a5,
+    type: 2}
+  GameOverText: {fileID: 114000010501736440, guid: e49dd86f8d99260419a474ebb7be61a5,
+    type: 2}
+  life1: {fileID: 114000011102883642, guid: e49dd86f8d99260419a474ebb7be61a5, type: 2}
+  life2: {fileID: 114000013822700784, guid: e49dd86f8d99260419a474ebb7be61a5, type: 2}
+  life3: {fileID: 114000011310210182, guid: e49dd86f8d99260419a474ebb7be61a5, type: 2}
 --- !u!114 &114000013351045874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -233,7 +235,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c7aa21680f637a14ab8639a00210f4fa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: be6e82fccc15252418900c20b76230d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
