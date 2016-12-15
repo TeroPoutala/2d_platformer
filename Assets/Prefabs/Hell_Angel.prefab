@@ -11,6 +11,21 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1000012146447082}
   m_IsPrefabParent: 1
+--- !u!1 &1000010070675062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000011632585246}
+  m_Layer: 0
+  m_Name: ArrowSpawnLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000012146447082
 GameObject:
   m_ObjectHideFlags: 0
@@ -21,6 +36,7 @@ GameObject:
   - 4: {fileID: 4000010977529350}
   - 212: {fileID: 212000013640181922}
   - 95: {fileID: 95000011198089918}
+  - 114: {fileID: 114000011632914552}
   m_Layer: 0
   m_Name: Hell_Angel
   m_TagString: Enemy
@@ -36,10 +52,24 @@ Transform:
   m_GameObject: {fileID: 1000012146447082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 4000011632585246}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &4000011632585246
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010070675062}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.5, y: 0, z: 0}
+  m_LocalScale: {x: 6.666667, y: 6.666667, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 4000010977529350}
   m_RootOrder: 0
 --- !u!95 &95000011198089918
 Animator:
@@ -58,6 +88,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000011632914552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012146447082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29609ce096d9b274aabfd9eb449cad7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 4000010592250538, guid: 15b30212b64953f4d9b390b04eac939f, type: 2}
+  arrowPrefab: {fileID: 1000010707206690, guid: 3756544ff9483c74ba87c5cf9e587e3a,
+    type: 2}
+  arrowSpawn: {fileID: 4000011632585246}
+  shootTimer: 2
 --- !u!212 &212000013640181922
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -87,7 +133,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 97342c8d9f307c147ae166a3b8f92537, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

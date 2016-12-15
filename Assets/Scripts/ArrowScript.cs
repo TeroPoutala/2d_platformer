@@ -19,7 +19,7 @@ public class ArrowScript : MonoBehaviour {
         {
             Player.lives--;
         }
-        if (col.gameObject.tag != "ShooterEnemy")
+        if (col.gameObject.tag != "ShooterEnemy" && col.gameObject.tag != "Enemy" && col.gameObject.tag != "Collectable")
         {
             Destroy(gameObject);
         }
