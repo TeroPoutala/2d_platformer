@@ -25,6 +25,8 @@ public class Player : MonoBehaviour
     private bool grounded = false;
 
     private Rigidbody2D rb;
+
+    private Animator animator;
     
     // Use this for initialization
     void Start()
@@ -38,6 +40,8 @@ public class Player : MonoBehaviour
         SetLivesUI();
 
         GameOverText.gameObject.SetActive(false);
+
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -82,20 +86,29 @@ public class Player : MonoBehaviour
             transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
 
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+            animator.SetTrigger("playerAttack");
+
+        }
+
         if (Input.GetKey(KeyCode.A) && hit == false)
         {
             playerX = -1;
             facingRight = false;
+            animator.SetTrigger("playerRun");
             
         }
         else if (Input.GetKey(KeyCode.D) && hit == false)
         {
             playerX = 1;
             facingRight = true;
+            animator.SetTrigger("playerRun");
         }
         else
         {
             playerX = 0;
+            //animator.SetTrigger("playerIdle");
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && grounded == true && hit == false)

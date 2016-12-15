@@ -24,7 +24,7 @@ GameObject:
   - 114: {fileID: 114000013351045874}
   m_Layer: 0
   m_Name: SwingHitbox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ GameObject:
   - 95: {fileID: 95000014090222764}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 1000011466226862}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4, y: 2, z: 0}
-  m_LocalScale: {x: 8, y: 11, z: 1}
+  m_LocalScale: {x: 10, y: 11, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010592250538}
@@ -69,8 +69,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012731585904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
+  m_LocalPosition: {x: -6.899682, y: -2.4591994, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
+=======
   m_LocalPosition: {x: -2.2980673, y: 0.44, z: 0}
   m_LocalScale: {x: 0.15168573, y: 0.15693858, z: 1}
+>>>>>>> 311b8f69a6f9b0354cbbcc6bfc8ee36b623514ef
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000010027026944}
@@ -103,10 +108,10 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 7, y: 10.8}
+  m_Size: {x: 7, y: 10}
 --- !u!61 &61000012227430930
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -130,7 +135,11 @@ Animator:
   m_GameObject: {fileID: 1000012731585904}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
+<<<<<<< HEAD
+  m_Controller: {fileID: 9100000, guid: 66dafe6b433ce3c4ca3bd7b19efbb6db, type: 2}
+=======
   m_Controller: {fileID: 9100000, guid: a2ca164f0573db14b8b8cc421d85fa21, type: 2}
+>>>>>>> 311b8f69a6f9b0354cbbcc6bfc8ee36b623514ef
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -149,10 +158,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45a23bc1f237744fb99d927f4543e8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  xSpeed: 0.1
+  ySpeed: 400
+  knockBack: 350
+  invTime: 1.4
+=======
   xSpeed: 0.18
   ySpeed: 650
   knockBack: 200
   invTime: 0.5
+>>>>>>> 311b8f69a6f9b0354cbbcc6bfc8ee36b623514ef
   ScoreText: {fileID: 0}
   GameOverText: {fileID: 0}
   life1: {fileID: 0}
@@ -169,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eacf69eb91e896458707a07826b4fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 120
+  power: 200
   targetEnemy: {fileID: 0}
 --- !u!212 &212000011273712694
 SpriteRenderer:
@@ -233,7 +249,11 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -931940015
   m_SortingOrder: 0
+<<<<<<< HEAD
+  m_Sprite: {fileID: 21300000, guid: 20530dfcc5cb4744e8b3903c9f259825, type: 3}
+=======
   m_Sprite: {fileID: 21300000, guid: a89d2350bae61e34e825e0e0dd80d671, type: 3}
+>>>>>>> 311b8f69a6f9b0354cbbcc6bfc8ee36b623514ef
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
