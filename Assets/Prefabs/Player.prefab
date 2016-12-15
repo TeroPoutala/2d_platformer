@@ -69,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012731585904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.899682, y: -2.4591994, z: 0}
+  m_LocalPosition: {x: -2.2980673, y: 0.44, z: 0}
   m_LocalScale: {x: 0.15168573, y: 0.15693858, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -88,7 +88,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -130,7 +130,7 @@ Animator:
   m_GameObject: {fileID: 1000012731585904}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a2ca164f0573db14b8b8cc421d85fa21, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -153,13 +153,11 @@ MonoBehaviour:
   ySpeed: 650
   knockBack: 200
   invTime: 0.5
-  ScoreText: {fileID: 114000010464018138, guid: e49dd86f8d99260419a474ebb7be61a5,
-    type: 2}
-  GameOverText: {fileID: 114000010501736440, guid: e49dd86f8d99260419a474ebb7be61a5,
-    type: 2}
-  life1: {fileID: 114000011102883642, guid: e49dd86f8d99260419a474ebb7be61a5, type: 2}
-  life2: {fileID: 114000013822700784, guid: e49dd86f8d99260419a474ebb7be61a5, type: 2}
-  life3: {fileID: 114000011310210182, guid: e49dd86f8d99260419a474ebb7be61a5, type: 2}
+  ScoreText: {fileID: 0}
+  GameOverText: {fileID: 0}
+  life1: {fileID: 0}
+  life2: {fileID: 0}
+  life3: {fileID: 0}
 --- !u!114 &114000013351045874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -233,9 +231,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -931940015
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: be6e82fccc15252418900c20b76230d3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a89d2350bae61e34e825e0e0dd80d671, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
