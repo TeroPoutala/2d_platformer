@@ -80,7 +80,7 @@ public class Player : MonoBehaviour
             transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
 
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             animator.SetTrigger("playerAttack");
 
@@ -90,32 +90,49 @@ public class Player : MonoBehaviour
         {
             playerX = -1;
             facingRight = false;
-            animator.SetTrigger("playerRun");
-            
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                animator.SetBool("playerRun 0", true);
+            }
         }
         else if (Input.GetKey(KeyCode.D) && hit == false)
         {
             playerX = 1;
             facingRight = true;
-            animator.SetTrigger("playerRun");
+
+            if (Input.GetKey(KeyCode.D))
+            { 
+                animator.SetBool("playerRun 0", true);
+            }       
         }
         else
         {
             playerX = 0;
-            //animator.SetTrigger("playerIdle");
+            animator.SetBool("playerRun 0", false);
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && grounded == true && hit == false)
         {
             grounded = false;
             rb.AddForce(transform.up * ySpeed);
+
         }
         else
         {
             playerY = 0;
         }
 
-        
+        if (grounded == false)
+        {
+            animator.SetBool("playerJump 0", true);
+        }
+        else if (grounded == true)
+        {
+            animator.SetBool("playerJump 0", false);
+        }
+
+
 
         transform.Translate(new Vector2(playerX * xSpeed, playerY * ySpeed), Space.World);
 
